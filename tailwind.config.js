@@ -28,5 +28,10 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addVariant }: any) {
+      addVariant('data-theme-dark', '&[data-theme="dark"]');
+      addVariant('data-theme-light', '&[data-theme="light"]');
+    }
+  ],
 };

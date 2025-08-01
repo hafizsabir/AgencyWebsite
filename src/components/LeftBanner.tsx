@@ -1,8 +1,8 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import {  FaLinkedinIn, FaReact } from "react-icons/fa";
-import Title from "./Title";
 import { SiTailwindcss, SiFigma, SiNextdotjs } from "react-icons/si";
 import { FadeIn } from "./FadeIn";
+import { useTheme } from "../context/ThemeContext";
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
@@ -12,25 +12,37 @@ const LeftBanner = () => {
     deleteSpeed: 10,
     delaySpeed: 2000,
   });
+  const { theme } = useTheme();
+  
   return (
     <FadeIn className="w-full lgl:w-1/2 flex flex-col gap-20">
       <div className="flex flex-col gap-5">
-        <h4 className=" text-lg font-normal">WELCOME TO MY WORLD</h4>
-        <h1 className="text-6xl font-bold text-white">
+        <h4 className={`text-lg font-normal ${
+          theme === 'dark' ? 'text-gray-400' : 'text-slate-600'
+        }`}>WELCOME TO MY WORLD</h4>
+        <h1 className={`text-6xl font-bold ${
+          theme === 'dark' ? 'text-white' : 'text-slate-900'
+        }`}>
           Hi, I'm <span className="text-designColor capitalize">Sabir Ali</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className={`text-4xl font-bold ${
+          theme === 'dark' ? 'text-white' : 'text-slate-900'
+        }`}>
           a <span>{text}</span>
           <Cursor cursorStyle="|" cursorColor="#ff014f" />
         </h2>
-        <p className="text-base font-bodyFont leading-6 tracking-wider">
-        I'm persuing my career as a Full Stack Developer. I have strong Grip on React Js/Next Js,Asp.net Core c# and Reational  databases like MySQL,SQL Server,Postgre SQL and No SQL Databases MongoDb.
+        <p className={`text-base font-bodyFont leading-6 tracking-wider ${
+          theme === 'dark' ? 'text-gray-400' : 'text-slate-600'
+        }`}>
+        I'm a Full Stack Developer with 3+ years of experience. I have strong Grip on React Js/Next Js,Asp.net Core c# and Reational  databases like MySQL,SQL Server,Postgre SQL and No SQL Databases MongoDb.
         </p>
-        <Title title="Past Experience : C# Unity" des="" />
+        {/* <Title title="Past Experience : C# Unity" des="" /> */}
       </div>
       <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
         <div>
-          <h2 className="text-base uppercase font-titleFont mb-4">
+          <h2 className={`text-base uppercase font-titleFont mb-4 ${
+            theme === 'dark' ? 'text-white' : 'text-slate-800'
+          }`}>
             Find me in
           </h2>
           <div className="flex gap-4">
@@ -47,7 +59,9 @@ const LeftBanner = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-base uppercase font-titleFont mb-4">
+          <h2 className={`text-base uppercase font-titleFont mb-4 ${
+            theme === 'dark' ? 'text-white' : 'text-slate-800'
+          }`}>
             BEST SKILL ON
           </h2>
           <div className="flex gap-4">

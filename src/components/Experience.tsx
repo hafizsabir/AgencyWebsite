@@ -16,22 +16,22 @@ const Experience = () => {
         <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
          
           <ResumeCard
-            title="Trainee Full Stack developer"
-            subTitle=" Integrity.IO - (january-2025-Present)"
+            title="Full Stack developer"
+            subTitle="ACME ONE - (january-2025-Present)"
             result="Lahore"
-            des="Started working as a full stack developer focusing front end in React js Next.js with javascript\typescript and backend in Asp.net Core c#"
+            des="Started working as a full stack developer focusing front end in React js/Next.js with javascript\typescript and backend in Asp.net Core c#"
           />
            <ResumeCard
-            title="Front-End Developer internship (React js Next.js)"
-            subTitle="ByteImpulse- 3 months"
+            title="Associate Software Developer "
+            subTitle="ByteImpulse- 1 year"
             result="Lahore"
-            des="Gained hand on Experience in Internship by working on a live Projects "
+            des="Gained hand on Experience in .Net Core / Asp.net Core  by working on a live Projects "
           />
            <ResumeCard
-            title="Associate Software Developer"
-            subTitle="Finz Games - (Sept-2022 -March-2024)"
+            title="Game Developer"
+            subTitle="Finz Games - (1.5 year)"
             result="Lahore"
-            des="Worked as Associate software Developer in unity(c#) Game development for both IOS & Android applications"
+            des="Worked as Associate Game Developer in unity(c#)/.Net Framework Game development for both IOS & Android applications"
           />
          
         </div>

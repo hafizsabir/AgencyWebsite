@@ -24,37 +24,7 @@ const Resume = () => {
        
         <ul className="w-full flex flex-col md:flex-row justify-center gap-4 md:gap-10 mt-6 text-center">
 
-            <li 
-              onClick={() => {
-                setEducationData(true);
-                setSkillData(false);
-                setExperienceData(false);
-               // setAchievementData(false);
-              }}
-              className={`${
-                educationData
-                  ? "border-designColor rounded-lg"
-                  : "border-transparent"
-              } resumeLi`}
-            >
-              Education
-            </li>
-            <li
-              onClick={() => {
-                setEducationData(false);
-                setSkillData(true);
-                setExperienceData(false);
-               // setAchievementData(false);
-              }}
-              className={`${
-                skillData
-                  ? "border-designColor rounded-lg"
-                  : "border-transparent"
-              } resumeLi`}
-            >
-              Professional Skills
-            </li>
-            <li
+        <li
               onClick={() => {
                 setEducationData(false);
                 setSkillData(false);
@@ -84,6 +54,37 @@ const Resume = () => {
             >
 
            
+            </li>
+            <li
+              onClick={() => {
+                setEducationData(false);
+                setSkillData(true);
+                setExperienceData(false);
+               // setAchievementData(false);
+              }}
+              className={`${
+                skillData
+                  ? "border-designColor rounded-lg"
+                  : "border-transparent"
+              } resumeLi`}
+            >
+              Professional Skills
+            </li>
+         
+            <li 
+              onClick={() => {
+                setEducationData(true);
+                setSkillData(false);
+                setExperienceData(false);
+               // setAchievementData(false);
+              }}
+              className={`${
+                educationData
+                  ? "border-designColor rounded-lg"
+                  : "border-transparent"
+              } resumeLi`}
+            >
+              Education
             </li>
           </ul>
         </div>
